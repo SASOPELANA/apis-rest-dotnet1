@@ -1,0 +1,47 @@
+# Build Folders
+bin/
+obj/
+out/
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.vcxproj.user
+*.pdb
+
+# DotNet Packages
+*.nupkg
+*.snupkg
+packages/
+
+# Logs
+*.log
+*.tlog
+*.vspscc
+
+# NuGet
+*.nuget.props
+*.nuget.targets
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+
+# User-specific files
+*.db
+*.local
+*.cache
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Others
+_ReSharper*/
+*.DotSettings.user
+
