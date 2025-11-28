@@ -1,3 +1,4 @@
+using apisRestNet.Api;
 using apisRestNet.Api.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,15 +10,12 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-// conecion a base de datos sqlite
-var connectionString = builder.Configuration.GetConnectionString("DataBase");
-
+var connectionString = builder.Configuration.GetConnectionString("Database");
 
 builder.Services.AddDbContext<AppDbContext>(options => { options.UseSqlite(connectionString); });
 
-
 var app = builder.Build();
-
+app.Initialize();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment()) app.MapOpenApi();
 
